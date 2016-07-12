@@ -1,0 +1,37 @@
+doctype html
+html(lang='ru')
+  head
+    title Ciklum
+    meta(charset="utf-8")
+
+    script(src='./script/script.js' defer)
+
+    link(rel='stylesheet', type='text/css', href='./css/style.css')
+
+    mixin navUl(...items)
+      nav
+        ul
+          each item in items
+            li
+              a(href= '#'+ item)= item
+
+    mixin navSelect(...items)
+      nav
+        select(onChange="window.location.href=this.value")
+          each item in items
+            option(value= '#'+ item)= item
+   
+  body
+    header 
+      div
+
+
+
+
+
+
+
+ 
+      
+    
+    

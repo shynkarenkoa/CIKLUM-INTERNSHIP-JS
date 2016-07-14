@@ -1,0 +1,86 @@
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 48px;
+  margin: 0 5%;
+  max-width: 1600px;
+}
+header a:hover {
+  background-color: #f2f2f2;
+}
+header a {
+  padding: 0 1.5em;
+  font-size: 15px;
+  line-height: 48px;
+  text-align: center;
+}
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+header a img {
+  width: 1em;
+  height: 1em;
+}
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header div ~ div {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*///Dropbox for Business///*/
+.dropbox {
+  height: 700px;
+  background: url("/img/background_dropbox.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: #f6f6f6;
+  /*Test with TEXT*/
+}
+.dropbox div {
+  width: 30%;
+  height: 700px;
+}
+/*@media screen and (min-width: 1201px)
+{
+	.dropbox
+	{
+		position: absolute;
+    	left: 50%;
+    	margin-left: -885px;
+   		background-position: right center;
+	}
+}
+
+@media screen and (min-width: 600px)
+{
+	.dropbox
+	{
+    	background-position: 370px center;
+	}
+}
+
+@media screen and (min-width: 400px)
+{
+	.dropbox
+	{
+		background-position: 300px center;
+    	background-size: cover;
+	}
+}*/

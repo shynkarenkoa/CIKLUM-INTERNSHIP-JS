@@ -12,7 +12,7 @@ gulp.task("jade", () =>
 
     gulp.src("./jade/*.jade")
         .pipe(jade())
-        .pipe(gulp.dest("./app/"))
+        .pipe(gulp.dest("./public/"))
         .pipe(debug())
 )
 
@@ -31,7 +31,7 @@ gulp.task("postcss", () =>
 
     return gulp.src("./less/css/*.css")
         .pipe(postcss(processors))
-        .pipe(gulp.dest("./app/css/"))
+        .pipe(gulp.dest("./public/css/"))
 	.pipe( postcss([ require('autoprefixer') ]) )
 
         .pipe(debug())
@@ -39,13 +39,13 @@ gulp.task("postcss", () =>
 
 gulp.task('connect', function() {
   connect.server({
-    root: 'app',
+    root: 'public',
     livereload: true
   });
 });
 
 gulp.task('html', function () {
-  gulp.src('./app/*.html')
+  gulp.src('./public/*.html')
     .pipe(connect.reload());
 });
 
@@ -54,7 +54,7 @@ gulp.task("watch", () =>
     gulp.watch("./jade/*.jade", [ "jade" ])
     gulp.watch("./less/*.less", [ "less" ])
     gulp.watch("./less/css/*.css", [ "postcss" ])
-    gulp.watch(['./app/*.html'], ['html'])
+    gulp.watch(['./public/*.html'], ['html'])
 })
 
 gulp.task("default", ["connect", "watch" ])

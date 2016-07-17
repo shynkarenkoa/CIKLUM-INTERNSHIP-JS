@@ -23,15 +23,16 @@ header {
   display: flex;
   height: 48px;
 }
-header a:hover {
+header div a:hover {
   background-color: #f2f2f2;
 }
-header a {
+header div a {
   all: unset;
   padding: 0 22.5px;
   font-size: 15px;
   line-height: 48px;
   text-align: center;
+  cursor: pointer;
 }
 nav {
   display: -webkit-box;
@@ -55,6 +56,7 @@ header div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 0;
 }
 header div ~ div {
   -webkit-box-pack: end;
@@ -71,4 +73,43 @@ header div ~ div {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+.menuStoreFirst li,
+.menuSoftware li {
+  all: unset;
+}
+.menuStoreFirst ul,
+.menuSoftware ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.menuStoreFirst,
+.menuSoftware {
+  position: absolute;
+  top: 48px;
+  z-index: 10;
+  background: #e5e5e5;
+}
+.menuStoreFirst li,
+.menuSoftware li {
+  width: 191px;
+  padding: 17px 24px;
+  font-size: 15px;
+  line-height: 20px;
+  color: #2F2F2F;
+}
+#backWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
 }

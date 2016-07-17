@@ -4,7 +4,7 @@ html(lang='en')
     title Ciklum
     meta(charset="utf-8")
 
-    script(src='./script/script.js' defer)
+    script(src='./script.js' defer)
 
     link(rel='stylesheet', type='text/css', href='./css/style.css')
     link(rel='stylesheet', type='text/css', href='./css/main.css')
@@ -23,16 +23,33 @@ html(lang='en')
       div
         img(src='./img/logo.png', alt='Microsoft logo', width='108', height='23')
         nav
-          a Store
-          a Products
+          a#store Store
+          a#products Products
           a(href='https://support.microsoft.com/en-gb') Support
       div
         input(type='search', title='Search Microsoft.com', value='Search Microsoft.com')
         a  
           img(src='./img/cart.png', alt='Shopping cart')
         a Sign in
+      section.menuStoreFirst
+        nav
+          ul
+            li
+              a#storeHome Store home
+            li  
+              a#devices Devices
+            li  
+              a Software
+      section#backWrapper
+      section.menuSoftware
+        nav
+          ul
+            li
+              a Office
+            li  
+              a Windows
     main
-      
+
       section#dropbox
         div
           h1 Collaborate faster and more securely

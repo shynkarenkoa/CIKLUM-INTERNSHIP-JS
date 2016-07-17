@@ -1,5 +1,5 @@
 doctype html
-html(lang='ru')
+html(lang='en')
   head
     title Ciklum
     meta(charset="utf-8")
@@ -8,43 +8,40 @@ html(lang='ru')
 
     link(rel='stylesheet', type='text/css', href='./css/style.css')
 
-    mixin navUl(...items)
+    mixin navOculus(site,...items)
       nav
         ul
           each item in items
             li
-              a(href= '#'+ item)= item
-
-    mixin navSelect(...items)
-      nav
-        select(onChange="window.location.href=this.value")
-          each item in items
-            option(value= '#'+ item)= item
-   
+              a(href= site + item)
+                div(class= item)
+                article
+                   h3
+                   h2
   body
     header 
       div
         img(src='./img/logo.png', alt='Microsoft logo', width='108', height='23')
         nav
-          a Магазин
-          a Продукти
-          a Підтримка
+          a Store
+          a Products
+          a(href='https://support.microsoft.com/en-gb') Support
       div
-        input(type='search', title='Пошук на веб-сайті Microsoft.com', value='Пошук на веб-сайті Microsoft.com')
+        input(type='search', title='Search Microsoft.com', value='Search Microsoft.com')
         a  
           img(src='./img/cart.png', alt='Shopping cart')
-        a Вхід
+        a Sign in
     main
       
-      section.dropbox
+      section#dropbox
         div
-          h1 Безопасный доступ, синхронизация и совместная работа
-          p Хранение и безопасный доступ к данным — аккаунты Dropbox Business пользуются доверием у системных администраторов и нравятся пользователям.
-          a Попробуйте бесплатную 30-дневную ознакомительную версию
-          p или 
-            a(href='https://www.dropbox.com/business/buy') купите прямо сейчас
+          h1 Collaborate faster and more securely
+          p Boost business productivity with the ultimate file saving and sharing tool that employees love and IT admins trust.
+          a(href='https://www.dropbox.com/business/try') Try free for 30 days
+          p or 
+            a(href='https://www.dropbox.com/business/buy') purchase now
       
-      section.invisionapp
+      section#invisionapp
         h2 Join over 2 million designers already using InVision. Get InVision 
         form.signup_form(method='POST', action='https://projects.invisionapp.com/d/signup/process', novalidate='novalidate')
           p 
@@ -58,7 +55,33 @@ html(lang='ru')
             input#signup_password(type='text', name='password', autocomplete='off', onfocus="if (this.value=='Create a Password') {this.value = ''; this.type = 'password'}", value="Create a Password")
           button(type='submit') Get Started — Free Forever!
         p By clicking "Get Started — Free Forever!" I agree to InVision's 
-          a(href="https://www.invisionapp.com/terms") Terms of Service.  
+          a(href="https://www.invisionapp.com/terms") Terms of Service.
+
+      section#oculus
+        nav
+          ul
+            li
+              a(href='https://www3.oculus.com/rift/#eve-valkyrie')
+                div.eve-valkyrie
+                article
+                   h3 FEATURED CONTENT
+                   h2 EVE: Valkyrie
+            li
+              a(href='https://www3.oculus.com/rift/#luckys-tale')
+                div.luckys-tale
+                article
+                   h3 INCLUDED WITH ALL RIFT PURCHASES
+                   h2 Lucky's Tale
+            li
+              a(href='https://www.oculus.com/en-us/blog/announcing-oculus-connect-3-and-rift-availability-update/')
+                div.games
+                article
+                   h3 FEATURED STORY
+                   h2 Announcing Oculus Connect 3 and Rift Availability Update
+      section
+        p TEST
+
+ 
 
 
     

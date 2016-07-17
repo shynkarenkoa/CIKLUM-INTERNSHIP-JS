@@ -20,6 +20,7 @@ header a:hover {
   background-color: #f2f2f2;
 }
 header a {
+  all: unset;
   padding: 0 22.5px;
   font-size: 15px;
   line-height: 48px;
@@ -46,29 +47,35 @@ header div ~ div {
   justify-content: flex-end;
 }
 @media screen and (max-width: 900px) {
-  nav {
+  header nav {
     display: none;
+  }
+  #oculus ul {
+    flex-direction: column;
   }
 }
 /*///Dropbox for Business///*/
-.dropbox {
-  height: 700px;
-  background: url("/img/background_dropbox.jpg");
+#dropbox {
+  min-height: 700px;
+  background: url('/img/background_dropbox.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right top;
   background-color: #f6f6f6;
-  /*Test with TEXT*/
+  /*dont forget Test with resize TEXT*/
+  color: #47525d;
+  font-family: 'Open sans';
 }
-.dropbox div {
+#dropbox div {
   width: 40%;
-  height: 700px;
+  height: 100%;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.dropbox div > a {
+#dropbox div > a {
+  text-decoration: none;
   padding: 1.2rem 1.6rem;
   font-size: 21px;
   line-height: 21px;
@@ -77,40 +84,42 @@ header div ~ div {
   text-align: center;
   border-radius: 6px;
 }
-.dropbox div h1 {
-  color: #47525d;
+#dropbox div h1 {
   font-size: 47.25px;
   font-weight: 100;
   line-height: 1.3;
   margin-bottom: 20px;
-  font-family: 'Open sans';
 }
-/*///*/
-.invisionapp input,
-.invisionapp button {
+#dropbox p a {
+  color: #0071e0;
+}
+/*///invisionapp///*/
+#invisionapp input,
+#invisionapp button {
   all: unset;
 }
-.invisionapp {
+#invisionapp {
   text-align: center;
   font-family: 'Open sans';
   padding: 160px 0 145px 0;
   background-color: #323a45;
 }
-.invisionapp h2 {
+#invisionapp h2 {
   color: #ffffff;
   margin-bottom: 55px;
   font-size: 30px;
   line-height: 52px;
 }
-.invisionapp form {
+#invisionapp form {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.invisionapp p {
+#invisionapp p {
   position: relative;
 }
-.invisionapp i {
+#invisionapp i {
   position: absolute;
   top: 18px;
   left: 15px;
@@ -129,13 +138,13 @@ header div ~ div {
 .ico-lock {
   background-position: 0 -430px;
 }
-.invisionapp input,
-.invisionapp button {
+#invisionapp input,
+#invisionapp button {
   width: 280px;
   height: 63px;
   border: 1px solid #d4d7da;
 }
-.invisionapp input {
+#invisionapp input {
   background: #ffffff;
   font-size: 18px;
   color: #8a959e;
@@ -143,7 +152,7 @@ header div ~ div {
   border-radius: 3px;
   margin-right: 10px;
 }
-.invisionapp button {
+#invisionapp button {
   background: #ff3366;
   color: #ffffff;
   font-size: 15px;
@@ -153,25 +162,79 @@ header div ~ div {
   border: 0;
   border-radius: 5px;
 }
-.invisionapp p,
-.invisionapp a {
+#invisionapp p,
+#invisionapp a {
   font-size: 12px;
   color: #747c83;
   line-height: 21.6px;
 }
-.invisionapp a:hover {
+#invisionapp a:hover {
   color: #ffffff;
 }
-/*form label
-{
-	position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 18px;
-    color: #8a959e;
-    margin: 16px 0px 0px 16px;
-    font-weight: 400;
-}*/
+/*///oculus///*/
+#oculus a,
+#oculus li {
+  all: unset;
+  width: 100%;
+}
+#oculus ul {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  /*	position: relative;*/
+}
+#oculus li {
+  position: relative;
+  height: 300px;
+  background: #1c1e20;
+  overflow: hidden;
+}
+#oculus article {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+#oculus div {
+  height: 300px;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .3;
+  transition: transform .3s, opacity .3s;
+}
+#oculus a:hover > div {
+  opacity: .8;
+  transform: scale(1.1, 1.1);
+}
+.eve-valkyrie {
+  background: url('/img/eve-valkyrie.jpg');
+}
+.luckys-tale {
+  background: url('/img/luckys.jpg');
+}
+.games {
+  background: url('/img/touch.jpg');
+}
+#oculus h2,
+#oculus h3 {
+  font-weight: 600;
+}
+#oculus h2 {
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 28px;
+}
+#oculus h3 {
+  color: #a4a5a6;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 16px;
+}
 /*@media screen and (min-width: 1201px)
 {
 	.dropbox

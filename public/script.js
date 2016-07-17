@@ -17,7 +17,7 @@ function clicker (selector, callback)
 	document.querySelector(selector).addEventListener("click", callback);
 }
 
-menuStoreFirst.hidden = wrapper.hidden = menuSoftware.hidden = true;
+menuStoreFirst.hidden = wrapper.hidden = menuSoftware.hidden = menuSoft.hidden = true;
 clicker('#store', () => {
 						menuStoreFirst.hidden = wrapper.hidden = false; 
 						menuStoreFirst.style.left = store.getBoundingClientRect().left + "px";
@@ -26,7 +26,7 @@ clicker('#products', () => {
 						menuStoreFirst.hidden = wrapper.hidden = false; 
 						menuStoreFirst.style.left = products.getBoundingClientRect().left + "px";
 						 })
-clicker('#backWrapper', () => {menuStoreFirst.hidden = wrapper.hidden = menuSoftware.hidden = true})
+clicker('#backWrapper', () => {menuStoreFirst.hidden = wrapper.hidden = menuSoftware.hidden = menuSoft.hidden = true})
 
 
 storeHome.addEventListener("mouseover", () => {

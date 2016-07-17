@@ -8,6 +8,7 @@ let menuSoftware = document.querySelector('.menuSoftware');
 let wrapper = document.querySelector('#backWrapper');
 let storeHome = document.querySelector('#storeHome');
 let devices = document.querySelector('#devices');
+let menuSoft = document.querySelector('.menuSoft');
 
 
 function clicker (selector, callback)
@@ -29,11 +30,17 @@ clicker('#backWrapper', () => {menuStoreFirst.hidden = wrapper.hidden = menuSoft
 
 
 storeHome.addEventListener("mouseover", () => {
+												menuSoft.hidden = true;
 												menuSoftware.hidden = false;
 												let left = menuStoreFirst.getBoundingClientRect().left + 239;
 												menuSoftware.style.left = left + "px";
 											  });
-
+devices.addEventListener("mouseover", () => {
+												menuSoftware.hidden = true;
+												let left = menuStoreFirst.getBoundingClientRect().left + 239;
+												menuSoft.hidden = false;
+												menuSoft.style.left = left + "px";
+											  });
 
 
 

@@ -61,26 +61,27 @@ header div ~ div {
     flex-direction: column;
   }
 }
-.menuStoreFirst li,
-.menuSoftware li {
-  all: unset;
-}
+/*Sections for javascript menu in header*/
 .menuStoreFirst ul,
-.menuSoftware ul {
+.menuSoftware ul,
+.menuSoft ul {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
 }
 .menuStoreFirst,
-.menuSoftware {
+.menuSoftware,
+.menuSoft {
   position: absolute;
   top: 48px;
   z-index: 10;
   background: #e5e5e5;
 }
 .menuStoreFirst li,
-.menuSoftware li {
+.menuSoftware li,
+.menuSoft li {
+  all: unset;
   width: 191px;
   padding: 17px 24px;
   font-size: 15px;

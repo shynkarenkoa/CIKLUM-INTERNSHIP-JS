@@ -84,12 +84,8 @@ header div ~ div
 	}
 }
 
-.menuStoreFirst li, .menuSoftware li
-{
-	all:unset;
-}
-
-.menuStoreFirst ul, .menuSoftware ul
+/*Sections for javascript menu in header*/
+.menuStoreFirst ul, .menuSoftware ul, .menuSoft ul
 {
 	display: flex;
 	flex-direction: column;
@@ -99,7 +95,7 @@ header div ~ div
 
 }
 
-.menuStoreFirst, .menuSoftware
+.menuStoreFirst, .menuSoftware, .menuSoft 
 {
 	position: absolute;
 	top: 48px;
@@ -109,8 +105,9 @@ header div ~ div
 
 }
 
-.menuStoreFirst li, .menuSoftware li
+.menuStoreFirst li, .menuSoftware li, .menuSoft li
 {
+	all:unset;
 	width: 191px;
 	padding: 17px 24px;
 	

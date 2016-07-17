@@ -35,20 +35,32 @@ html(lang='ru')
           img(src='./img/cart.png', alt='Shopping cart')
         a Вхід
     main
+      
       section.dropbox
         div
           h1 Безопасный доступ, синхронизация и совместная работа
           p Хранение и безопасный доступ к данным — аккаунты Dropbox Business пользуются доверием у системных администраторов и нравятся пользователям.
           a Попробуйте бесплатную 30-дневную ознакомительную версию
-          span или
+          p или 
             a(href='https://www.dropbox.com/business/buy') купите прямо сейчас
-
-
-
-
-
-
- 
       
+      section.invisionapp
+        h2 Join over 2 million designers already using InVision. Get InVision 
+        form.signup_form(method='POST', action='https://projects.invisionapp.com/d/signup/process', novalidate='novalidate')
+          p 
+            i.ico-user
+            input#signup_name(type='text', name='name', autocomplete='off', onfocus="if (this.value=='Your Name') this.value = ''", value="Your Name")
+          p  
+            i.ico-email
+            input#signup_email(type='text', name='email', autocomplete='off', onfocus="if (this.value=='Email Address') {this.value = ''; this.type = 'email'}", value="Email Address")
+          p  
+            i.ico-lock
+            input#signup_password(type='text', name='password', autocomplete='off', onfocus="if (this.value=='Create a Password') {this.value = ''; this.type = 'password'}", value="Create a Password")
+          button(type='submit') Get Started — Free Forever!
+        p By clicking "Get Started — Free Forever!" I agree to InVision's 
+          a(href="https://www.invisionapp.com/terms") Terms of Service.  
+
+
+    
     
     

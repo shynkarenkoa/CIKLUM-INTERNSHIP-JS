@@ -7,17 +7,17 @@ html(lang='en')
     script(src='./script/script.js' defer)
 
     link(rel='stylesheet', type='text/css', href='./css/style.css')
+    link(rel='stylesheet', type='text/css', href='./css/main.css')
+    link(rel='stylesheet', type='text/css', href='./css/footer.css')
 
-    mixin navOculus(site,...items)
-      nav
-        ul
-          each item in items
-            li
-              a(href= site + item)
-                div(class= item)
-                article
-                   h3
-                   h2
+    mixin footer-nav(partition, ...items)
+      article  
+        h2= partition
+        nav
+          ul
+            each item in items
+              li
+                a(href='#')= item
   body
     header 
       div
@@ -78,8 +78,34 @@ html(lang='en')
                 article
                    h3 FEATURED STORY
                    h2 Announcing Oculus Connect 3 and Rift Availability Update
+    footer
+      nav
+        +footer-nav('Shop and Learn','Mac','iPad','iPhone','Watch','TV','Music','iTunes','iPod','Accessories','Gift Cards')
+        +footer-nav('Apple Store','Find a Store','Genius Bar','Workshops and Learning','Youth Programs','Apple Store App','Refurbished','Financing','Reuse and Recycling','Order Status','Shopping Help')
+        article
+          +footer-nav('For Education','Apple and Education','Shop for College')
+          +footer-nav('For Business','Apple and Business','Shop for Business')
+        article
+          +footer-nav('Account','Manage Your Apple ID','Apple Store Account','iCloud.com')
+          +footer-nav('Apple Values','Environment','Supplier Responsibility','Accessibility','Privacy','Inclusion and Diversity','Education')
+        +footer-nav('About Apple','Apple Info','Newsroom','Job Opportunities','Investors','Events','Contact Apple')
       section
-        p TEST
+        small More ways to shop: Visit an 
+          a(href='http://www.apple.com/retail/') Apple Store
+          , call 1-800-MY-APPLE, or 
+          a(href='https://locate.apple.com/') find a reseller
+        hr
+        small Copyright &copy; 2016 Apple Inc. All rights reserved.  
+          a(href='http://www.apple.com/privacy/privacy-policy/') Privacy Policy  
+          &#124; 
+          a(href='http://www.apple.com/legal/internet-services/terms/site.html')  Terms of Use 
+          &#124;
+          a(href='http://www.apple.com/shop/browse/open/salespolicies')  Sales and Refunds  
+          &#124;
+          a(href='http://www.apple.com/legal/')  Legal  
+          &#124;
+          a(href='http://www.apple.com/sitemap/')  Site Map  
+
 
  
 

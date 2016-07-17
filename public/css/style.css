@@ -73,6 +73,9 @@ header div ~ div {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  header input {
+    width: 80px;
+  }
 }
 /*Sections for javascript menu in header*/
 .menuStoreFirst ul,

@@ -1,0 +1,46 @@
+footer ul,
+footer li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+footer a {
+  all: unset;
+  cursor: pointer;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f2f2f2;
+  font-size: 12px;
+  font-family: 'Myriad';
+  line-height: 20px;
+  color: #666;
+}
+footer > nav {
+  width: 100%;
+  max-width: 980px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 22px;
+}
+footer h2 {
+  margin: 0;
+  padding-top: 32px;
+  font-size: 12px;
+  line-height: 1.66667;
+  font-weight: 600;
+  letter-spacing: normal;
+  color: #333;
+}
+footer section {
+  padding: 20px 0 24px 0;
+  width: 100%;
+  max-width: 980px;
+  text-align: left;
+}
+footer section a {
+  color: #08c;
+}

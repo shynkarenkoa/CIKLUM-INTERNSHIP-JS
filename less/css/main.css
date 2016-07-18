@@ -1,6 +1,6 @@
 #dropbox {
   min-height: 700px;
-  background: url('/img/background_dropbox.jpg');
+  background: url('../img/background_dropbox.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 40vw top;
@@ -74,7 +74,7 @@
   vertical-align: middle;
   height: 24px;
   width: 24px;
-  background-image: url('/img/icons_inv.png');
+  background-image: url('../img/icons_inv.png');
   background-repeat: no-repeat;
 }
 .ico-user {
@@ -160,13 +160,13 @@
   transform: scale(1.1, 1.1);
 }
 .eve-valkyrie {
-  background: url('/img/eve-valkyrie.jpg');
+  background: url('../img/eve-valkyrie.jpg');
 }
 .luckys-tale {
-  background: url('/img/luckys.jpg');
+  background: url('../img/luckys.jpg');
 }
 .games {
-  background: url('/img/touch.jpg');
+  background: url('../img/touch.jpg');
 }
 #oculus h2,
 #oculus h3 {

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Open sans';
-  src: url('/fonts/OpenSans.ttf');
+  src: url('../fonts/OpenSans.ttf');
 }
 @font-face {
   font-family: 'Myriad';
-  src: url('/fonts/myriad.ttf');
+  src: url('../fonts/myriad.ttf');
 }
 body {
   max-width: 1920px;
